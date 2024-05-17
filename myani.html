@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 효과</title>
+    <link type="text/css" rel="stylesheet" href="mycss.css">
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation: 2s myanim;
+            animation-iteration-count: 10;
+        }
+
+        @keyframes myanim {
+            0% {background-color: red; left: 0px; top: 0px;} 
+            25% {background-color: red; left:100px; top:0px;}
+            50% {background-color: yellow; left:200px; top:0px;}
+            75% {background-color: blue; left:100px; top:0px;}
+            100% {background-color: blue; left:0px; top:0px;}
+        }
+    </style>
+</head>
+<body>
+        <header>
+            <h1>My Blog Page</h1>
+        </header>
+        <nav>
+            <h1>Links</h1>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JAVASCRIPT</a></li>
+            <li><a href="myani.html">ani 1</a></li>
+            <li><a href="myani2.html">ani 2</a></li>
+        </ul>
+        </nav>
+        <section id="main">
+            <div></div>
+        </section>
+        <footer>Copyright (c) 2023 Hong</footer>
+        
+</body>
+</html>

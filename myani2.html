@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog Page</title>
+    <title>Document</title>
     <link type="text/css" rel="stylesheet" href="mycss.css">
+    <style>
+        img {
+            width: 100px;
+            display: block;
+            position: relative;
+            margin: 10px;
+            animation: myanim 5s infinite;
+        }
+        #img1 { animation-timing-function: ease-out;}
+        #img2 { animation-timing-function: ease-in;}
+        @keyframes myanim {
+            from { left: 0px;}
+            to { left: 500px;}
+        }
+    </style>
+</head>
 <body>
     <header>
         <h1>My Blog Page</h1>
@@ -21,7 +37,9 @@
     </ul>
     </nav>
     <section id="main">
-        <h1>2 페이지</h1>
+        <img id="img1" src="rabbit.png"></div>
+        <img id="img2" src="turtle.png"></div>
+        <div></div>
     </section>
     <footer>Copyright (c) 2023 Hong</footer>
 </body>
