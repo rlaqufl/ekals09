@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS</title>
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "title title"
+        "content content"
+        "footer footer";
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr;
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #000000cf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Dune Rise', sans-serif; /* Dune Rise 폰트 적용 */
+    text-transform: lowercase; /* 소문자 적용 */
+    margin-left: 20px;
+    text-decoration: none;
+}
+.header .logo a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: #ffffff; /* 글자 색을 하얀색으로 변경 */
+}
+.header .logo a:hover {
+    color: rgba(235, 235, 235, 0.304);
+}
+
+.header .nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: 20px;
+    letter-spacing: 0.2em;
+    padding: 20px;
+}
+.header .nav a:hover {
+    color: rgba(235, 235, 235, 0.304);
+}
+
+.about-title {
+    grid-area: title;
+    background-color: hsl(0, 0%, 100%);
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    background-image: url('b1.jpg');
+    
+    background-size: cover;
+}
+.about-title .com {
+    font-size: 27px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.about-title .wha {
+    font-size: 20px;
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+.content .card {
+    background-color: white;
+    padding: 55px;
+    padding-top: 80px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.content .card img {
+    width: 80%;
+    height: 300px; /* 동일한 높이로 설정 */
+    object-fit: cover; /* 이미지를 잘라서 맞추기 */
+}
+
+.content .card .date {
+    color: #999;
+    margin-top: 10px;
+
+}
+
+.logo-section {
+    flex: 1;
+    background-color: #ffffff00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Dune Rise', sans-serif; /* Dune Rise 폰트 적용 */
+    text-transform: lowercase; /* 소문자 적용 */
+    text-align: center;
+}
+.about-text .blu {
+    font-family: 'Dune Rise', sans-serif; /* Dune Rise 폰트 적용 */
+    text-transform: lowercase; /* 소문자 적용 */
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+
+.about-text {
+    flex: 2;
+    background-color: #90caf900;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    line-height: 1.9;
+    padding-top: 110px;
+    text-align: center;
+    max-width: 695px;
+    margin: 0 auto;
+   font-size: 14px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #000000cf;
+    color: rgba(205, 205, 205, 0.731);
+    padding: 10px 0;
+    padding-left: 30px;
+    font-size: 12px;
+}
+/* 미디어 쿼리: 태블릿 */
+@media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .content .card {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        /* 미디어 쿼리: 스마트폰 */
+        @media (max-width: 480px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header .nav {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+
+            .header .nav a {
+                flex: 1 1 50%; /* 두 개씩 배치 */
+                text-align: right;
+                padding-bottom: 20px;
+                font-size: 13px;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+                gap: 5px;
+                padding: 20px;
+                align-items: center;
+            }
+
+            .content .card {
+                width: 100%;
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .content .card img {
+                max-height: 200px;
+            }
+
+            .content .card h3 {
+                font-size: 18px;
+            }
+
+            .content .card .date {
+                font-size: 14px;
+            }
+        }
+</style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo"><a href="index.html">BLUELIFE</a></div>
+            <nav class="nav">
+                <a href="about.html">About</a>
+                <a href="problem.html">Problem</a>
+                <a href="news.html">News</a>
+                <a href="works.html">Works</a>
+            </nav>
+        </header>
+        <section class="about-title">
+            <section class="com">뉴스</section><br>
+            <section class="wha">News</section>
+        </section>
+        <section class="content">
+            <div class="card">
+                <img src="d.jpg" alt="Scuba diving">
+                <h3>“제주남방큰돌고래 서식, 해양보호구역으로 지정하라”</h3>
+                <div class="date">2024-05-28</div>
+            </div>
+            <div class="card">
+                <img src="d2.jpg" alt="Dolphin">
+                <h3>해양환경, 해양동물들에게 어떤 영향 미치나?</h3>
+                <div class="date">2022-04-23</div>
+            </div>
+        </section>
+        <footer class="footer">
+            Copyright 2018 Bluelife. All rights reserved
+        </footer>
+    </div>
+</body>
+</html>

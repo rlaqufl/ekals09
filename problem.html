@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROBLEM</title>
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "title title"
+        "content content"
+        "footer footer";
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr;
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #000000cf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Dune Rise', sans-serif; /* Dune Rise 폰트 적용 */
+    text-transform: lowercase; /* 소문자 적용 */
+    margin-left: 20px;
+    text-decoration: none;
+}
+.header .logo a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: #ffffff; /* 글자 색을 하얀색으로 변경 */
+}
+.header .logo a:hover {
+    color:  rgba(235, 235, 235, 0.304);
+}
+
+.header .nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: 20px;
+    letter-spacing: 0.2em;
+    padding: 20px;
+}
+.header .nav a:hover {
+    color:  rgba(235, 235, 235, 0.304);
+}
+
+.about-title {
+    grid-area: title;
+    background-color: hsl(0, 0%, 100%);
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    background-image: url('p7.jpg');
+    
+    background-size: cover;
+}
+.about-title .com {
+    font-size: 27px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.about-title .wha {
+    font-size: 20px;
+}
+
+.content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    background-image: url(p9.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.about-text {
+    flex: 2;
+    background-color: #90caf900;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    line-height: 1.9;
+    padding-top: 100px;
+    text-align: left;
+    max-width: 695px;
+    margin: 0 auto;
+   font-size: 19px; 
+}
+.footer {
+    grid-area: footer;
+    background-color: #000000cf;
+    color: rgba(205, 205, 205, 0.731);
+    padding: 10px 0;
+    padding-left: 30px;
+    font-size: 12px;
+}
+@media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+                
+            }
+            .header .nav {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+
+            .header .nav a {
+                flex: 1 1 50%; /* 두 개씩 배치 */
+                text-align: right;
+                padding-bottom: 20px;
+                font-size: 13px;
+            }
+        }
+
+        /* 미디어 쿼리: 스마트폰 */
+        @media (max-width: 480px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header .logo {
+                margin: 10px 0;
+            }
+
+            .header .nav {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            .header .nav a {
+                flex: 1 1 100%; /* 한 개씩 배치 */
+                text-align: center;
+                font-size: 16px; /* 글자 크기 줄이기 */
+                padding: 10px; /* 패딩 줄이기 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo"><a href="index.html">BLUELIFE</a></div>
+            <nav class="nav">
+                <a href="about.html">About</a>
+                <a href="problem.html">Problem</a>
+                <a href="news.html">News</a>
+                <a href="works.html">Works</a>
+            </nav>
+        </header>
+        <section class="about-title">
+            <section class="com">문제 인식</section><br>
+            <section class="wha">Problem</section>
+        </section>
+        <section class="content">
+            <div class="about-text">
+                <p><h1>건강한 바다는</h1> 70만 종 이상 생명체가 살아가는 
+                삶의 터전일 뿐 아니라, 지구의 유지를 위해 필요합니다.<br> 수십억 명에게 
+                식량과 일자리를 제공하는 바다는 인류의 건강과 안녕을 위해 매우 중요합니다.<br>
+                그러나 지금 바다는 그 어느 때보다 큰 위험에 처해 있습니다.<br>
+                플라스틱 쓰레기와 파괴적인 어업, 해수면 온도 상승 때문입니다. 우리가 함께 
+                노력한다면, <br>바다와 수많은 해양생물 그리고 사람들을 지켜낼 수 있을 것입니다.</p>
+            </div>
+        </section>
+        <footer class="footer">
+            Copyright 2018 Bluelife. All rights reserved
+        </footer>
+    </div>
+</body>
+</html>

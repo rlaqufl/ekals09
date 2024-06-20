@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT</title>
+    <style>
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "title title"
+        "content content"
+        "footer footer";
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr;
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #000000cf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Dune Rise', sans-serif; /* Dune Rise 폰트 적용 */
+    text-transform: lowercase; /* 소문자 적용 */
+    margin-left: 20px;
+    text-decoration: none;
+}
+.header .logo a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: #ffffff; /* 글자 색을 하얀색으로 변경 */
+}
+.header .logo a:hover {
+    color: rgba(235, 235, 235, 0.304);
+}
+
+.header .nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: 20px;
+    letter-spacing: 0.2em;
+    padding: 20px;
+}
+.header .nav a:hover {
+    color: rgba(235, 235, 235, 0.304);
+}
+
+.about-title {
+    grid-area: title;
+    background-color: hsl(0, 0%, 100%);
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    background-image: url('p6.jpg');
+    
+    background-size: cover;
+}
+.about-title .com {
+    font-size: 27px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.about-title .wha {
+    font-size: 20px;
+}
+
+.content {
+    grid-area: content;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    background-image: url(p4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.logo-section {
+    flex: 1;
+    background-color: #ffffff00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Dune Rise', sans-serif; /* Dune Rise 폰트 적용 */
+    text-transform: lowercase; /* 소문자 적용 */
+    text-align: center;
+}
+.about-text .blu {
+    font-family: 'Dune Rise', sans-serif; /* Dune Rise 폰트 적용 */
+    text-transform: lowercase; /* 소문자 적용 */
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+
+.about-text {
+    flex: 2;
+    background-color: #90caf900;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    line-height: 1.9;
+    padding-top: 110px;
+    text-align: center;
+    max-width: 695px;
+    margin: 0 auto;
+   font-size: 14px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #000000cf;
+    color: rgba(205, 205, 205, 0.731);
+    padding: 10px 0;
+    padding-left: 30px;
+    font-size: 12px;
+}
+@media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header .nav {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+
+            .header .nav a {
+                flex: 1 1 50%; /* 두 개씩 배치 */
+                text-align: right;
+                padding-bottom: 20px;
+                font-size: 13px;
+            }
+        }
+
+        /* 미디어 쿼리: 스마트폰 */
+        @media (max-width: 480px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header .logo {
+                margin: 10px 0;
+            }
+
+            .header .nav {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            .header .nav a {
+                flex: 1 1 100%; /* 한 개씩 배치 */
+                text-align: right;
+                font-size: 16px; /* 글자 크기 줄이기 */
+                padding: 10px; /* 패딩 줄이기 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo"><a href="index.html">BLUELIFE</a></div>
+            <nav class="nav">
+                <a href="about.html">About</a>
+                <a href="problem.html">Problem</a>
+                <a href="news.html">News</a>
+                <a href="works.html">Works</a>
+            </nav>
+        </header>
+        <section class="about-title">
+            <section class="com">회사 소개</section><br>
+            <section class="wha">About</section>
+        </section>
+        <section class="content">
+            <div class="about-text">
+                <h1 class="blu">BlueLife</h1>
+                <p>BlueLife는 우리의 푸른 행성에서 가장 귀중한 자원 중 하나인 바다를 사랑하고 보호하는 사람들을 위한 플랫폼입니다. 우리는 지구상의 모든 생명체에게 중요한 역할을 하는 해양 생태계를 보호하고, 지속 가능한 관리 방안을 모색합니다. 우리는 고유의 바다 생명과 자원을 존중하며, 해양 생태계 보호와 함께 바다의 아름다움을 나누고자 합니다.<br>
+                <p>BlueLife는 당신이 바다에 대한 사랑과 관심을 공유할 수 있는 공간입니다. 우리는 지구 온난화, 해양 오염, 해양 동물의 멸종 위기에 대응하며, 해양 생태계의 상태를 개선하기 위해 지속적으로 노력하고 있습니다. 우리는 또한 바다 동물들의 복지와 보호를 위해 노력하며, 모든 이들이 바다와 그 안의 생명체에 대한 존중과 보살핌을 실천할 수 있도록 돕고자 합니다.</p>
+            </div>
+        </section>
+        <footer class="footer">
+            Copyright 2018 Bluelife. All rights reserved
+        </footer>
+    </div>
+</body>
+</html>
